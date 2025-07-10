@@ -1,59 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>   
+  <head>  
   <title>
     Careers at Replit
-  </title>
+  </title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size: 28px;
-        font-family: Arial, sans-serif;
-        color: rgb(255, 100, 100);
-        text-align: center;
-      }
       #banner {
+        height: 360px;
         width: 100%;
-        height: 180px;
-        object-fit: cover;        
-      }
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100, 100, 255);
-        text-align: center;
-        font-weight: normal;               
-      }
-      p{
-        font-family: Roboto;
-        color: rgb(80, 80, 80);
-      }
-      #container {
-        max-width: 600px;
-        margin: auto;
-      }
-      #rex {
-        color: rgb(100, 230, 80)
-        font-size: 17px;
-        font-family: Roboto;
-        text-align: center;
       }
     </style>
   </head>
   <body>
-  <div id="container">
-   <h1> You'll learn a lot here! </h1>
-    <img id="banner" src="https://b0caa9bb-b0d9-498f-abee-c76271572579-00-2ur2vj9xoacds.kirk.replit.dev/static/bbyrk.jpg" width="120" height="90" alt="careers at replit" />
-    <h2> About Careers </h2>
-    <P> 
+  <div class="container">
+   <h1 class="text-center" mt-2 mb-4 > {{company_name}}You'll learn a lot here! </h1>
+     <img class="img-fluid" id="banner" src="https://b0caa9bb-b0d9-498f-abee-c76271572579-00-2ur2vj9xoacds.kirk.replit.dev/static/bbyrk.jpg" width="120" height="90" alt="careers at replit" />   
+    <h2 class="text-center" mt-2 mb-4 > About Careers </h2>
+    <P class="lead"> 
     I followed my dreams and now i am getting excellent rewards for it.
       I often tell myself to be excellent at everything i do.
       it creates a popularity for me and i am getting a lot of opportunities.
       I am also grateful for my parents and my friends who have always supported me.
     </P>
-    <h2> My Best traits and techniques </h2>
-    <p id="rex"> Angular WorkFlow </p>
-    <div style="text-align: center;">
-    <button> Repository </button>
+    <h2 class="text-center"  mt-2 mb-4 > My Best traits and techniques </h2>
+    <div> {% for project in projects %} 
+       {% include 'project.html'%}
+    {% endfor %}
+    Angular WorkFlow
+      </div>
+    <div class="text-center">  
+    <button type="button" class="btn btn-primary btn-lg" > Repository </button>
+      <p class="mt-4"> Copy Right 2025, Career at replit. All rights reserved. </p>
     </div>
     </div>
   </body>
